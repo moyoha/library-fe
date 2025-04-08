@@ -1,21 +1,23 @@
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, createBrowserRouter} from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
 import { BookManage } from './pages/BookManage';
 import '@ant-design/v5-patch-for-react-19';
+import './index.css';
+
 const routes = [
   {
     path: "/login",
-    element: <Login/>,
+    element: <Login />,
   },
   {
     path: "/register",
-    element: <Register/>,
+    element: <Register />,
   },
   {
     path: "/",
-    element: <BookManage/>,
+    element: <BookManage />,
   },
 ];
 
@@ -25,4 +27,4 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-root.render(<RouterProvider router={router}/>);
+root.render(<RouterProvider router={router} />);
